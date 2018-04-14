@@ -67,6 +67,9 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   display: block;
 }
 
+.btn btn-default{
+    font-size: 30px;
+}
 body {
   margin: 0;
   font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -80,9 +83,27 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: 1550px, auto;
-  background-color: #2B3E50;
+  background-color: rgba(43, 62, 80,1);
+}
+#mainHeadline{
+    background-color:rgba(43, 62, 80, .7);  
+}
+.row{
+    background-color:rgba(43, 62, 80, .8);   
 }
 
+#pageParagraph{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    background-color:rgba(43, 62, 80, .7);
+    
+}
+
+
+#footerInfo{
+
+}
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
