@@ -79,3 +79,4 @@ C:\Users\sarah\Desktop\DevCodeVS\TrashCollector\TrashCollector\TrashCollector\bi
 C:\Users\sarah\Desktop\DevCodeVS\TrashCollector\TrashCollector\TrashCollector\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\sarah\Desktop\DevCodeVS\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.dll
 C:\Users\sarah\Desktop\DevCodeVS\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.pdb
+C:\Users\sarah\Desktop\DevCodeVS\TrashCollector\TrashCollector\TrashCollector\obj\Debug\TrashCollector.csprojResolveAssemblyReference.cache

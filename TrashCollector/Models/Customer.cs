@@ -7,5 +7,7 @@ namespace TrashCollector.Models
 {
     public class Customer
     {
+        public string emailAddress{ get; set; }
+        public string password { get; set; }
     }
 }
