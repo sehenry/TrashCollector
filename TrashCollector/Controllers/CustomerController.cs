@@ -18,7 +18,7 @@ namespace TrashCollector.Controllers
         // GET: Customer/Details
         public ActionResult Details()
         {
-            var customer = new Customer {firstName = "Sarah", middleInitial = "E", lastName = "Henry", emailAddress = "sarahelhe@gmail.com", password = "password"};
+            var customer = new Customer {firstName = "Sarah", middleInitial = "E", lastName = "Henry", emailAddress = "sarahelhe@gmail.com", password = "blah2781", address = " 2700 n Stowell ave Milwaukee"};
             return View(customer);
         }
 
