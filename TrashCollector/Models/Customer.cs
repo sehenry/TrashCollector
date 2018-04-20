@@ -14,8 +14,6 @@ namespace TrashCollector.Models
         public string password { get; set; }
         [Display(Name = "First Name: ")]
         public string firstName { get; set; }
-        [Display(Name = "Middle Initial")]
-        public string middleInitial { get; set; }
         [Display(Name = "Last Name: ")]
         public string lastName { get; set; }
         [Display(Name = "Street Address: ")]
@@ -27,9 +25,10 @@ namespace TrashCollector.Models
         {
             get
             {
-                return string.Format("{0} {1} {2}", this.firstName, this.middleInitial, this.lastName);
+                return string.Format("{0} {1} {2}", this.firstName, this.lastName);
             }
         }
+        
         public void Register()
         {
 

@@ -102,9 +102,24 @@ body {
     background-color:rgba(43, 62, 80, .7);  
     text-align:center;
     font-size:34px;
+    border-style:solid;
+    border-width:8px;
+    border-color:black;
+}
+#subHeadlines{
+background-color:rgba(43, 62, 80, .7);  
+    text-align:center;
+    font-size:34px;
+    border-bottom:solid;
+    border-width:8px;
+    border-color:black;
 }
 .row{
-    background-color:rgba(43, 62, 80, .8);   
+    background-color:rgba(43, 62, 80, .7);   
+    text-align:center;
+    border-style:solid;
+    border-width:8px;
+    border-color:black;
 }
 #pageLeftText{
     font-size: 28px;
@@ -112,13 +127,19 @@ body {
     text-align: left;
     background-color:rgba(43, 62, 80, .7);
     text-shadow: 3px 3px black;   
+    border-style:solid;
+    border-width:8px;
+    border-color:black;
 }
 #pageParagraph{
     font-size: 25px;
     color: white;
     text-align: left;
     background-color:rgba(43, 62, 80, .7);
-    text-shadow: 3px 3px black;   
+    text-shadow: 3px 3px black;  
+    border-style:solid;
+    border-width:8px;
+    border-color:black; 
 }
 .faq{
     font-size: 18px;
@@ -126,6 +147,9 @@ body {
     text-align: left;
     background-color:rgba(43, 62, 80, .7);
     text-shadow: 3px 3px black; 
+    border-style:solid;
+    border-width:8px;
+    border-color:black;
 }
 
 
