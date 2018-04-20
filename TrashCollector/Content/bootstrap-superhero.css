@@ -118,8 +118,14 @@ body {
     color: white;
     text-align: left;
     background-color:rgba(43, 62, 80, .7);
-    text-shadow: 3px 3px black;
-    
+    text-shadow: 3px 3px black;   
+}
+.faq{
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    background-color:rgba(43, 62, 80, .7);
+    text-shadow: 3px 3px black; 
 }
 
 
