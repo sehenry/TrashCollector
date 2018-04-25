@@ -79,7 +79,7 @@ namespace TrashCollector.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("HomePage", "Customer");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -156,7 +156,7 @@ namespace TrashCollector.Controllers
                 if (result.Succeeded)
                 {
                     var db = new ApplicationDbContext();
-                    var customer = new Customer { firstName = model.FirstName, lastName = model.LastName, address = "2700 N Stowell ave", password = model.Password };
+                    var customer = new Customer { firstName = model.FirstName, lastName = model.LastName, password = model.Password };
                     db.Customers.Add(customer);
                     db.SaveChanges();
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
@@ -167,7 +167,7 @@ namespace TrashCollector.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("HomePage", "Customer");
                 }
                 AddErrors(result);
             }

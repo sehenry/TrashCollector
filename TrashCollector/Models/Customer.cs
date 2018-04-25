@@ -25,44 +25,11 @@ namespace TrashCollector.Models
         {
             get
             {
-                return string.Format("{0} {1} {2}", this.firstName, this.lastName);
+                return string.Format("{0} {1}", this.firstName, this.lastName);
             }
         }
         
-        public void Register()
-        {
 
-        }
-
-        public void Login()
-        {
-
-        }
-        public void SetPickUpDay()
-        {
-
-        }
-
-        public void EditPickUpDay()
-        {
-
-        }
-        public void ChooseFrequency()
-        {
-
-        }
-        public void PausePickup()
-        {
-
-        }
-        public void ViewTrashSchedule()
-        {
-
-        }
-        public void ViewPayments()
-        {
-
-        }
         public virtual ApplicationUser User { get; set; }
         public string ApplicationUserId { get; set; }
 

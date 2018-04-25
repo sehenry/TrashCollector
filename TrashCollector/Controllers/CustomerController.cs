@@ -9,8 +9,11 @@ namespace TrashCollector.Controllers
 {
     public class CustomerController : Controller
     {
-        // GET: Customer
-        public ActionResult Index()
+        public ActionResult HomePage()
+        {
+            return View();
+        }
+        public ActionResult MyAccount()
         {
             return View();
         }
@@ -36,7 +39,7 @@ namespace TrashCollector.Controllers
             {
                 // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction("HomePage");
             }
             catch
             {
@@ -58,7 +61,7 @@ namespace TrashCollector.Controllers
             {
                 // TODO: Add update logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction("HomePage");
             }
             catch
             {
@@ -80,12 +83,37 @@ namespace TrashCollector.Controllers
             {
                 // TODO: Add delete logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction("HomePage");
             }
             catch
             {
                 return View();
             }
+        }
+        public ActionResult SetPickUpDay()
+        {
+            return View();
+        }
+
+        public ActionResult EditPickUpDay()
+        {
+            return View();
+        }
+        public ActionResult ChooseFrequency()
+        {
+            return View();
+        }
+        public ActionResult PausePickup()
+        {
+            return View();
+        }
+        public ActionResult ViewTrashSchedule()
+        {
+            return View();
+        }
+        public ActionResult ViewPayments()
+        {
+            return View();
         }
     }
 }

@@ -1,0 +1,31 @@
+﻿@model TrashCollector.Models.Customer
+
+@{
+    ViewBag.Title = "HomePage";
+}
+
+<div id="mainHeadline" class="jumbotron">
+    <h1>WELCOME!</h1>
+    <p class="lead">Trash Collector is a user-friendly wesbite where YOU are in control of your trash. Be in full control of your trash pick-up dates, payments and your account in one place! No hassle.</p>
+    <a href="@Url.Action("Details", "Customer")" class="btn btn-primary btn-large btn-block">My Information</a>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <hr />
+        <p>@Html.ActionLink("My Account", "MyAccount", "Customer", null, new { @class = "btn btn-primary btn-large btn-block" })</p>
+        <p>@Html.ActionLink("Learn More", "About", "Home", null, new { @class = "btn btn-primary btn-large btn-block" })</p>
+    </div>
+
+    <div class="col-md-6">
+        <hr />
+        <p>@Html.ActionLink("FAQ", "FAQ", "Home", null, new { @class = "btn btn-primary btn-large btn-block" })</p>
+        <p>@Html.ActionLink("Contact Us", "Contact", "Home", null, new { @class = "btn btn-primary btn-large btn-block" })</p>
+
+    </div>
+    @*<div class="col-md-12">
+            <h2></h2>
+            <p>@Html.ActionLink("Contact Us", "Contact", "Home", null, new { @class = "btn btn-primary btn-large btn-block" })</p>
+        </div>*@
+</div>
+
