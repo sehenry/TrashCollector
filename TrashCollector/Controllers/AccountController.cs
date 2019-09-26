@@ -79,7 +79,7 @@ namespace TrashCollector.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToAction("HomePage", "Customer");
+                    return RedirectToAction("Index", "Customers");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -151,12 +151,12 @@ namespace TrashCollector.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 IdentityResult result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     var db = new ApplicationDbContext();
-                    var customer = new Customer { firstName = model.FirstName, lastName = model.LastName, password = model.Password };
+                    var customer = new Customer { firstName = model.FirstName, lastName = model.LastName, email = model.Email, password = model.Password, ApplicationUserId = user.Id};
                     db.Customers.Add(customer);
                     db.SaveChanges();
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
@@ -167,7 +167,7 @@ namespace TrashCollector.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("HomePage", "Customer");
+                    return RedirectToAction("Index", "Customers");
                 }
                 AddErrors(result);
             }

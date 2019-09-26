@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -30,6 +31,8 @@ namespace TrashCollector.Models
             return new ApplicationDbContext();
         }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<TrashWorker> TrashWorkers { get; set; }
+        public IEnumerable ApplicationUsers { get; internal set; }
     }
    
 } 

@@ -3,17 +3,19 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Owin;
 using TrashCollector.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace TrashCollector
 {
     public partial class Startup
     {
+
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {
+
             // Configure the db context, user manager and signin manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
@@ -34,7 +36,7 @@ namespace TrashCollector
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
-            });            
+            });
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
@@ -62,7 +64,33 @@ namespace TrashCollector
             //{
             //    ClientId = "",
             //    ClientSecret = ""
-            //});
+
         }
+        //Try and figure out how to assign different roles using below methods:
+
+        //public void Configuration(IAppBuilder app)
+        //{
+        //    ConfigureAuth(app);
+        //    createRoles();
+        //}
+        //private void createRoles()
+        //{
+        //    ApplicationDbContext context = new ApplicationDbContext();
+        //    var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+        //    if (!roleManager.RoleExists("Customer"))
+        //    {
+        //        var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+        //        role.Name = "Customer";
+        //        roleManager.Create(role);
+        //    }
+        //    if (!roleManager.RoleExists("Worker"))
+        //    {
+        //        var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+        //        role.Name = "Worker";
+        //        roleManager.Create(role);
+        //    }
+
+        //}
     }
 }
+    //});

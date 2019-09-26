@@ -196,23 +196,31 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\WorkerController.cs" />
+    <Compile Include="Controllers\TrashWorkersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804211549188_Register User.cs" />
-    <Compile Include="Migrations\201804211549188_Register User.Designer.cs">
-      <DependentUpon>201804211549188_Register User.cs</DependentUpon>
+    <Compile Include="Migrations\201909232249308_InitialMigration.cs" />
+    <Compile Include="Migrations\201909232249308_InitialMigration.Designer.cs">
+      <DependentUpon>201909232249308_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909232350375_UpdatedCustomerTable.cs" />
+    <Compile Include="Migrations\201909232350375_UpdatedCustomerTable.Designer.cs">
+      <DependentUpon>201909232350375_UpdatedCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909262345035_TrashWorker.cs" />
+    <Compile Include="Migrations\201909262345035_TrashWorker.Designer.cs">
+      <DependentUpon>201909262345035_TrashWorker.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Worker.cs" />
+    <Compile Include="Models\TrashWorker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -274,15 +282,20 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Customer\Details.cshtml" />
-    <Content Include="Views\Customer\Create.cshtml" />
     <Content Include="Views\Home\FAQ.cshtml" />
-    <Content Include="Views\Customer\HomePage.cshtml" />
-    <Content Include="Views\Customer\MyAccount.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\TrashWorkers\Create.cshtml" />
+    <Content Include="Views\TrashWorkers\Delete.cshtml" />
+    <Content Include="Views\TrashWorkers\Details.cshtml" />
+    <Content Include="Views\TrashWorkers\Edit.cshtml" />
+    <Content Include="Views\TrashWorkers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Worker\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -293,8 +306,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804211549188_Register User.resx">
-      <DependentUpon>201804211549188_Register User.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909232249308_InitialMigration.resx">
+      <DependentUpon>201909232249308_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909232350375_UpdatedCustomerTable.resx">
+      <DependentUpon>201909232350375_UpdatedCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909262345035_TrashWorker.resx">
+      <DependentUpon>201909262345035_TrashWorker.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
